@@ -1,0 +1,53 @@
+#adição
+def add (x, y):
+    return x + y
+
+#subtração
+def subtract(x, y):
+    return x - y
+
+#multiplicação
+def multiply(x, y):
+    return x * y
+
+#divisão
+def divide(x, y):
+    return x / y
+
+print("Seleciono o operador.")
+print("1. Adição")
+print("2. Subtração")
+print("3. Multiplicação")
+print("4. Divisão")
+
+while True:
+    choice = input("Escolha (1/2/3/4): ")
+
+    if choice in ('1', '2', '3', '4'):
+        try:
+            num1 = float(input("Entre o primeiro valor: "))
+            num2 = float(input("Entre o segundo valor: "))
+        except ValueError:
+            print("Valor invalido, digite um número.")
+            continue
+
+        if choice == '1':
+            print(num1, "+", num2, "=", add(num1, num2))
+
+        elif choice == '2':
+            print(num1, "-", num2, "=", subtract(num1, num2))
+
+        elif choice == '3':
+            print(num1, "*", num2, "=", multiply(num1, num2))
+        
+        elif choice == '4':
+            print(num1, "/", num2, "=", divide(num1, num2))
+
+        #check se o usuario quer fazer outro calculo
+        #quebra o loop se a resposta for não
+
+        next_calculation = input("Gostaria de fazer outro calculo? (s/n): ")
+        if next_calculation == "n":
+            break
+    else:
+        print("Valor invalido")

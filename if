@@ -1,0 +1,20 @@
+while True:
+    try:
+        number = int(input('Digite um valor: '))
+    except ValueError:
+        print("Valor invalido, digite um numero.")
+        continue
+
+    if number > 0:
+        print(f'{number} \nvalor positivo.')
+
+    elif number < 0:
+        print(f'{number} \nvalor negativo')
+
+    else:
+        print("0 \nvalor nulo.")
+
+
+    proximo_calculo = input("Gostaria de continuar? (s/n) ")
+    if proximo_calculo == "n":
+        break
