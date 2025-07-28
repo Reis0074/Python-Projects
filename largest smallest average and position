@@ -1,0 +1,17 @@
+numbers = []
+
+for _ in range(5):
+    num = float(input("Type a number: "))
+    numbers.append(num)
+
+largest = max(numbers)
+
+position = numbers.index(largest) + 1
+
+smallest = min(numbers)
+average = sum(numbers) / len(numbers)
+
+print("\nNumbers you typed", numbers)
+print(f"This is the largest number is: {largest} at index {position} ")
+print(f"This is the smallest number is: {smallest} ")
+print(f"This is the average number is: {average}")
