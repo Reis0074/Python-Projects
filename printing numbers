@@ -1,0 +1,4 @@
+i = input("type a number: ")
+i = float(i)
+for n in range (10):
+    print(i + n)

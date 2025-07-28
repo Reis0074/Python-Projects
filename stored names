@@ -1,0 +1,7 @@
+names = []
+
+for _ in range(5):
+    nam = input("Make a list of 5 numbers: ")
+    names.append(nam)
+
+print(names)

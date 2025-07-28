@@ -1,0 +1,26 @@
+import tkinter as tk
+
+# Step 1: Create the main window
+root = tk.Tk()
+root.title("Teste de GUI")
+root.geometry("500x150")  # Width x Height
+
+# Step 2: Add widgets
+label = tk.Label(root, text="Olá Usuario!")
+label.pack(pady=10)  # Add padding
+
+entry = tk.Entry(root)
+entry.pack(pady=5)
+entry = tk.Entry(root)
+entry.pack(pady=5)
+
+def on_click():
+    user_text1 = entry.get()
+    user_text2 = entry.get()
+    label.config(text=f"Você digitou: {user_text1, user_text2}")
+
+button = tk.Button(root, text="Clique aqui", command=on_click)
+button.pack(pady=10)
+
+# Step 3: Start the GUI event loop
+root.mainloop()

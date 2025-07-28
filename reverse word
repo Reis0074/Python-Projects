@@ -1,0 +1,7 @@
+word = input("Type a phrase: ")
+
+reversed_word = word[::-1]
+
+result = reversed_word.capitalize()
+
+print(result)
