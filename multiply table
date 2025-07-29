@@ -1,4 +1,13 @@
-i = input("Type a number so that you can see it's multiplication table: ")
-i = int(i)
-for n in range (1, 11):
-    print(f"{i} x {n} = {i * n}")
+while True:
+    try:
+        i = input("Type a number so that you can see it's multiplication table: ")
+    except ValueError:
+        print("Invalid, type a number.")
+        continue
+    i = int(i)
+    for n in range (1, 11):
+        print(f"{i} x {n} = {i * n}")
+
+    proceed = input("Would you like to continue? (y/n) ")
+    if proceed == "n":
+        break

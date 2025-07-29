@@ -1,2 +1,11 @@
-name = input("What's your name?\n")
-print(f"Hello, {name}")
+while True:
+    name = input("What's your name?\n")
+    if name.strip() == "":
+        print("Name can't be empty, Try again!")
+        continue
+        
+    print(f"Hello, {name}")
+        
+    proceed = input("Would you like to continue? (y/n) ")
+    if proceed == "n":
+        break
